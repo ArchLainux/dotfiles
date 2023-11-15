@@ -1,0 +1,89 @@
+* {
+    font:   "JetBrainsMono Nerd Font 12";
+
+    background-color:   transparent;
+    text-color:         #cad3f5;
+    accent-color:       #8aadf4;
+
+    margin:     0px;
+    padding:    1px;
+    spacing:    0px;
+}
+
+configuration {
+    modi:                       "drun";
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+}
+
+window {
+    location:           north;
+    width:              99.5%;
+    background-color:   #24273a;
+    border-radius:      3px;
+    x-offset:           -34.5px;
+    y-offset:           -34.5px;
+    children:           [ mainbox,message ];
+}
+
+mainbox {
+    orientation:    horizontal;
+    children:       [ inputbar,listview ];
+}
+
+inputbar {
+    width:      15%;
+    padding:    1px 8px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
+}
+
+prompt, entry, element-text, element-icon {
+    vertical-align: 0.5;
+}
+
+prompt {
+    text-color: #8aadf4;
+}
+
+listview {
+    layout: horizontal;
+}
+
+element {
+    padding:    1px 8px;
+    spacing:    4px;
+}
+
+element normal urgent {
+    text-color: #eed49f;
+}
+
+element normal active {
+    text-color: #8aadf4;
+}
+
+element selected {
+    text-color: #24273a;
+}
+
+element selected normal {
+    background-color:   #8aadf4;
+    border-radius:      5px;
+}
+
+element selected urgent {
+    background-color:   #eed49f;
+}
+
+element selected active {
+    background-color:   #8aadf4;
+}
+
+element-icon {
+    size:   0.75em;
+}
+
+element-text {
+    text-color: inherit;
+}
